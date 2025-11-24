@@ -1,0 +1,30 @@
+# Sensitive files - NEVER commit these
+**/secrets
+**/secret
+**/.env
+**/.env.*
+*_history
+.bash_history
+.zsh_history
+
+# Fish
+fishd.*
+fish_history
+fish_variables
+
+# SSH keys
+**/.ssh/id_*
+**/.ssh/*.pem
+**/.ssh/*.key
+
+# Tokens and credentials
+**/*token*
+**/*password*
+**/*credential*
+
+# Atuin may contain sensitive data
+.config/atuin/key
+.config/atuin/session
+
+# GitHub CLI tokens
+.config/gh/hosts.yml
