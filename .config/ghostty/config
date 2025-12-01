@@ -42,3 +42,4 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 theme = dark:Catppuccin Frappe,light:Catppuccin Macchiato
+keybind = shift+enter=text:\n

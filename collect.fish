@@ -17,6 +17,10 @@ echo "→ Collecting ghostty config..."
 mkdir -p "$DOTFILES_DIR/.config/ghostty"
 cp -r ~/.config/ghostty/* "$DOTFILES_DIR/.config/ghostty/" 2>/dev/null
 
+echo "→ Collecting bat config..."
+mkdir -p "$DOTFILES_DIR/.config/bat"
+cp -r ~/.config/bat/config "$DOTFILES_DIR/.config/bat/config" 2>/dev/null
+
 # Atuin shell history
 echo "→ Collecting atuin config..."
 mkdir -p "$DOTFILES_DIR/.config/atuin"
