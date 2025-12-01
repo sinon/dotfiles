@@ -3,7 +3,6 @@ if status is-interactive
     atuin init fish | source
 end
 
-pyenv init - | source
 starship init fish | source
 
 # Created by `pipx` on 2024-04-12 09:27:03

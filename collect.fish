@@ -34,10 +34,5 @@ mkdir -p "$DOTFILES_DIR/git"
 cp ~/.gitconfig "$DOTFILES_DIR/git/.gitconfig" 2>/dev/null
 cp ~/.gitignore_global "$DOTFILES_DIR/git/.gitignore_global" 2>/dev/null
 
-# SSH config (no keys!)
-echo "→ Collecting SSH config..."
-mkdir -p "$DOTFILES_DIR/ssh"
-cp ~/.ssh/config "$DOTFILES_DIR/ssh/config" 2>/dev/null
-
 echo "✓ Collection complete!"
 echo "⚠️  Review files before committing - check for sensitive data!"

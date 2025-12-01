@@ -42,10 +42,5 @@ echo "→ Installing git configs..."
 test -f "$DOTFILES_DIR/git/.gitconfig" && ln -sf "$DOTFILES_DIR/git/.gitconfig" ~/.gitconfig
 test -f "$DOTFILES_DIR/git/.gitignore_global" && ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~/.gitignore_global
 
-# SSH config
-echo "→ Installing SSH config..."
-mkdir -p ~/.ssh
-test -f "$DOTFILES_DIR/ssh/config" && ln -sf "$DOTFILES_DIR/ssh/config" ~/.ssh/config
-
 echo "✓ Installation complete!"
 echo "🐟 Restart fish or run 'source ~/.config/fish/config.fish'"
