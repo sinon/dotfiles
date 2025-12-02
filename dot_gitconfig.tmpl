@@ -11,6 +11,10 @@
 [core]
 	pager = delta
 	excludesFile = ~/.gitignore
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
 [interactive]
 	diffFilter = delta --color-only
 [delta]
@@ -19,6 +23,10 @@
 [merge]
 	conflictstyle = zdiff3
 [diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
         tool = difftastic
 
 [difftool]
