@@ -8,7 +8,6 @@ starship init fish | source
 # Created by `pipx` on 2024-04-12 09:27:03
 set PATH $PATH /Users/Rob.Hand/.local/bin
 set RIPGREP_CONFIG_PATH $RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
-fzf --fish | source
 zoxide init fish | source
 
 abbr -a gco "git checkout"
