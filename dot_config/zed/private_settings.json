@@ -7,13 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+      "model": "claude-opus-4.5"
+    },
+    "commit_message_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o-mini"
+    },
+    "thread_summary_model": {
+      "provider": "copilot_chat",
+      "model": "gemini-2.0-flash"
     },
     "model_parameters": []
   },
@@ -40,12 +48,22 @@
   "vim_mode": true,
   "ui_font_size": 15.0,
   "buffer_font_size": 13.0,
+  // "buffer_font_fallbacks": ["FiraCode Nerd Font"],
   "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "Catppuccin Mocha"
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato"
   },
   "languages": {
+    "TOML": {
+      "format_on_save": "on"
+    },
+    "JSON": {
+      "format_on_save": "off"
+    },
+    "YAML": {
+      "format_on_save": "off"
+    },
     "Python": {
       "language_servers": ["!pyrefly", "!basedpyright", "ty", "..."]
     }

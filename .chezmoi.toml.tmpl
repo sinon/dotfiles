@@ -1,0 +1,10 @@
+{{- $email := promptString "email" -}}
+{{- $name := promptString "name" "Rob Hand" -}}
+{{- $signingkey := promptString "GPG signing key (leave empty if none)" -}}
+
+[data]
+    email = {{ $email | quote }}
+    name = {{ $name | quote }}
+{{- if $signingkey }}
+    signingkey = {{ $signingkey | quote }}
+{{- end }}

@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Personal configuration files for my development environment.
+Personal configuration files managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Tools Configured
 
@@ -9,58 +9,109 @@ Personal configuration files for my development environment.
 - 📚 **Atuin** - Magical shell history
 - ⭐ **Starship** - Minimal, fast prompt
 - 📝 **Zed** - High-performance code editor
-- 🐙 **Git** - Version control
+- 🦇 **Bat** - A cat clone with wings
+- 🐙 **Git** - Version control (with delta & difftastic)
 - 🔧 **GitHub CLI** - GitHub from the command line
 
-## Installation
+## Quick Start
 
 ### Prerequisites
 
-Install required tools first:
+Install chezmoi and required tools:
 
 ```fish
-brew install fish ghostty starship atuin gh git ripgrep
+brew install chezmoi fish ghostty starship atuin gh git ripgrep bat delta difftastic
 ```
 
-Quick Setup
+## One-Line Install
 
-1. Clone this repository:
+````fish
+chezmoi init --apply sinon
+```
+
+This will:
+1. Clone this repo to `~/.local/share/chezmoi`
+2. Prompt for your name, email, and GPG signing key
+3. Apply all configurations to your home directory
+````
+
+## Usage
+
+### View Pending Changes
 
 ```fish
-git clone <your-repo-url> ~/dotfiles
-cd ~/dotfiles
+chezmoi diff
 ```
 
-2. Run the install script:
+### Apply Changes
 
 ```fish
-chmod +x install.fish
-./install.fish
+chezmoi apply
 ```
 
-3. Set fish as default shell:
+### Edit a Config File
 
 ```fish
-chsh -s (which fish)
+# Edit the source file and apply changes
+chezmoi edit ~/.config/fish/config.fish
+
+# Or edit and apply in one step
+chezmoi edit --apply ~/.config/fish/config.fish
 ```
 
-## Manual Installation
-
-If you prefer manual setup, create symlinks:
+### Add a New Dotfile
 
 ```fish
-ln -sf ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
-ln -sf ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-# ... etc
+chezmoi add ~/.config/some-app/config.toml
 ```
 
-## Updating Dotfiles
+### Update After Editing Outside chezmoi
 
-After making changes on your system, collect them back:
+If you edited a file directly (not via `chezmoi edit`):
 
 ```fish
-./collect.fish
-git add .
-git commit -m "Update configs"
-git push
+chezmoi re-add ~/.config/fish/config.fish
 ```
+
+### Pull Latest Changes
+
+```fish
+chezmoi update
+```
+
+## Configuration
+
+On first run, chezmoi will prompt for:
+
+| Variable     | Description           | Example            |
+| ------------ | --------------------- | ------------------ |
+| `email`      | Git commit email      | `you@example.com`  |
+| `name`       | Git commit name       | `Your Name`        |
+| `signingkey` | GPG key ID (optional) | `8B0BA7243355B005` |
+
+To reconfigure these values:
+
+```fish
+chezmoi init
+```
+
+## Structure
+
+```
+~/.local/share/chezmoi/
+├── .chezmoi.toml.tmpl     # Configuration template
+├── dot_config/
+│   ├── private_fish/      # Fish shell config
+│   ├── private_atuin/     # Atuin config
+│   ├── ghostty/           # Ghostty terminal
+│   ├── starship.toml      # Starship prompt
+│   ├── bat/               # Bat config
+│   ├── gh/                # GitHub CLI
+│   └── zed/               # Zed editor
+├── dot_gitconfig.tmpl     # Git config (templated)
+└── dot_gitignore          # Global gitignore
+```
+
+## License
+
+MIT

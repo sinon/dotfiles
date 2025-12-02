@@ -1,9 +1,11 @@
 [user]
-	email = 146272+Sinon@users.noreply.github.com
-	name = Rob Hand
-	signingkey = 8B0BA7243355B005
+	email = {{ .email }}
+	name = {{ .name }}
+{{- if .signingkey }}
+	signingkey = {{ .signingkey }}
+{{- end }}
 [commit]
-	gpgsign = true
+	gpgsign = {{ if .signingkey }}true{{ else }}false{{ end }}
 [gpg]
 	program = gpg
 [core]
