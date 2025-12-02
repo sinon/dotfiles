@@ -25,14 +25,16 @@ brew install chezmoi fish ghostty starship atuin gh git ripgrep bat delta diffta
 
 ## One-Line Install
 
-````fish
+```fish
 chezmoi init --apply sinon
 ```
 
 This will:
+
 1. Clone this repo to `~/.local/share/chezmoi`
 2. Prompt for your name, email, and GPG signing key
 3. Apply all configurations to your home directory
+
 ````
 
 ## Usage
@@ -115,3 +117,4 @@ chezmoi init
 ## License
 
 MIT
+````
