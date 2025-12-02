@@ -10,7 +10,7 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-opus-4.5"
@@ -65,7 +65,13 @@
       "format_on_save": "off"
     },
     "Python": {
-      "language_servers": ["!pyrefly", "!basedpyright", "ty", "..."]
+      "language_servers": ["!pyrefly", "!basedpyright", "ty", "ruff", "..."],
+      "code_actions_on_format": {
+        // Organize imports
+        "source.organizeImports.ruff": true,
+        // Fix all auto-fixable lint violations
+        "source.fixAll.ruff": true
+      }
     }
   },
   "lsp": {
@@ -76,7 +82,7 @@
     },
     "pyrefly": {
       "binary": {
-        "path": "/Users/Rob.Hand/.local/bin/pyrefly",
+        "path": "~/.local/bin/pyrefly",
         "arguments": ["lsp"]
       },
       "settings": {
@@ -93,12 +99,15 @@
     },
     "ty": {
       "binary": {
-        "path": "/Users/Rob.Hand/.local/bin/ty",
+        "path": "~/.local/bin/ty",
         "arguments": ["server"]
+      },
+      "settings": {
+        "disableLanguageServices": false
       }
     }
   },
   "format_on_save": "on",
   "show_edit_predictions": false,
-  "show_completions_on_input": false
+  "show_completions_on_input": true
 }
