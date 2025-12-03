@@ -35,8 +35,6 @@ This will:
 2. Prompt for your name, email, and GPG signing key
 3. Apply all configurations to your home directory
 
-````
-
 ## Usage
 
 ### View Pending Changes
@@ -117,4 +115,3 @@ chezmoi init
 ## License
 
 MIT
-````
