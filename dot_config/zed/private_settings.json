@@ -64,6 +64,10 @@
     "YAML": {
       "format_on_save": "off"
     },
+    "Git Config": {
+      "tab_size": 4,
+      "show_whitespaces": "all"
+    },
     "Python": {
       "language_servers": ["!pyrefly", "!basedpyright", "ty", "ruff", "..."],
       "code_actions_on_format": {
