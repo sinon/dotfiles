@@ -28,3 +28,4 @@ fish_variables
 
 # GitHub CLI tokens
 .config/gh/hosts.yml
+.dot_config/gh/private_hosts.yml
