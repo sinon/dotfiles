@@ -8,12 +8,18 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "buffer_font_family": "JetBrainsMono Nerd Font",
+  "show_whitespaces": "all",
+  "whitespace_map": {
+    // Which characters to show when `show_whitespaces` enabled
+    "space": "•",
+    "tab": "⟶" // use "→", for a shorter arrow
+  },
   "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-3-pro-preview"
+      "model": "gpt-5.2"
     },
     "commit_message_model": {
       "provider": "copilot_chat",
@@ -55,6 +61,9 @@
     "dark": "Catppuccin Macchiato"
   },
   "languages": {
+    "Markdown": {
+      "format_on_save": "off"
+    },
     "TOML": {
       "format_on_save": "on"
     },
@@ -107,7 +116,11 @@
         "arguments": ["server"]
       },
       "settings": {
-        "disableLanguageServices": false
+        "disableLanguageServices": false,
+        "experimental": {
+          "rename": true,
+          "autoImport": true
+        }
       }
     }
   },
