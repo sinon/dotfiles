@@ -114,13 +114,6 @@
       "binary": {
         "path": "~/.local/bin/ty",
         "arguments": ["server"]
-      },
-      "settings": {
-        "disableLanguageServices": false,
-        "experimental": {
-          "rename": true,
-          "autoImport": true
-        }
       }
     }
   },
