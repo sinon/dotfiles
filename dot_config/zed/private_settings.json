@@ -13,12 +13,10 @@
   "whitespace_map": {
     // Which characters to show when `show_whitespaces` enabled
     "space": "•",
-    "tab": "⟶", // use "→", for a shorter arrow
+    "tab": "⟶" // use "→", for a shorter arrow
   },
   "agent": {
-    "profiles": {
-      
-    },
+    "profiles": {},
     "favorite_models": [
       {
         "provider": "copilot_chat",
@@ -38,40 +36,40 @@
       }
     ],
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask"
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5.2-codex",
+      "model": "gpt-5.2-codex"
     },
     "commit_message_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o-mini",
+      "model": "gpt-4o-mini"
     },
     "thread_summary_model": {
       "provider": "copilot_chat",
-      "model": "gemini-2.0-flash",
+      "model": "gemini-2.0-flash"
     },
-    "model_parameters": [],
+    "model_parameters": []
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": true
   },
   "project_panel": {
-    "hide_gitignore": true,
+    "hide_gitignore": true
   },
   "base_keymap": "VSCode",
   "minimap": {
-    "show": "auto",
+    "show": "auto"
   },
   "autosave": "on_focus_change",
   "wrap_guides": [80, 100],
   "file_types": {
     "java": ["*.java"],
-    "plaintext": [".lycheeignore"],
+    "plaintext": [".lycheeignore"]
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "vim_mode": true,
   "ui_font_size": 15.0,
@@ -80,24 +78,24 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Macchiato",
-    "dark": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato"
   },
   "languages": {
     "Markdown": {
-      "format_on_save": "off",
+      "format_on_save": "off"
     },
     "TOML": {
-      "format_on_save": "on",
+      "format_on_save": "on"
     },
     "JSON": {
-      "format_on_save": "off",
+      "format_on_save": "off"
     },
     "YAML": {
-      "format_on_save": "off",
+      "format_on_save": "off"
     },
     "Git Config": {
       "tab_size": 4,
-      "show_whitespaces": "all",
+      "show_whitespaces": "all"
     },
     "Python": {
       "language_servers": [
@@ -112,41 +110,41 @@
         // Organize imports
         "source.organizeImports.ruff": true,
         // Fix all auto-fixable lint violations
-        "source.fixAll.ruff": true,
-      },
-    },
+        "source.fixAll.ruff": true
+      }
+    }
   },
   "lsp": {
     "yaml-language-server": {
       "settings": {
-        "yaml": { "keyOrdering": false, "format": { "singleQuote": true } },
-      },
+        "yaml": { "keyOrdering": false, "format": { "singleQuote": true } }
+      }
     },
     "pyrefly": {
       "binary": {
         "path": "~/.local/bin/pyrefly",
-        "arguments": ["lsp"],
+        "arguments": ["lsp"]
       },
       "settings": {
         "python": {
-          "pythonPath": ".venv/bin/python",
+          "pythonPath": ".venv/bin/python"
         },
         "pyrefly": {
           "project_includes": ["src/**/*.py", "tests/**/*.py"],
           "project_excludes": ["**/.[!/.]*", "**/*venv/**"],
           // "search_path": ["src"],
-          "ignore_errors_in_generated_code": true,
-        },
-      },
+          "ignore_errors_in_generated_code": true
+        }
+      }
     },
     "ty": {
       "binary": {
         "path": "~/.local/bin/ty",
-        "arguments": ["server"],
-      },
-    },
+        "arguments": ["server"]
+      }
+    }
   },
   "format_on_save": "on",
   "show_edit_predictions": false,
-  "show_completions_on_input": true,
+  "show_completions_on_input": true
 }
