@@ -8,6 +8,8 @@ set -gx HOMEBREW_NO_ANALYTICS 1
 
 set -gx RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
 
+set -gx XDG_CONFIG_HOME $HOME/.config
+
 zoxide init fish | source
 if status is-interactive
     # Commands to run in interactive sessions can go here

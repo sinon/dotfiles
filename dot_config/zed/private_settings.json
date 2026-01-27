@@ -16,11 +16,32 @@
     "tab": "⟶", // use "→", for a shorter arrow
   },
   "agent": {
+    "profiles": {
+      
+    },
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-3-pro-preview"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.2"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.2-codex"
+      }
+    ],
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-2.5-pro",
+      "model": "gpt-5.2-codex",
     },
     "commit_message_model": {
       "provider": "copilot_chat",

@@ -1,3 +1,5 @@
 font-family = JetBrains Mono
 theme = dark:Catppuccin Frappe,light:Catppuccin Macchiato
 keybind = shift+enter=text:\n
+auto-update-channel=tip
+macos-icon = holographic
