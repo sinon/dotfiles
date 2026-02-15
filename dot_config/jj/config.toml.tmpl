@@ -1,0 +1,55 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "{{ .name }}"
+email = "{{ .email }}"
+
+{{- if and (index . "signingkey") .signingkey }}
+[signing]
+backend = "gpg"
+key = "{{ .signingkey }}"
+sign-all = true
+behaviour = "own"
+{{- end }}
+
+[ui]
+pager = "delta"
+default-command = "log"
+diff-formatter = "difft"
+# diff-formatter = ":git"
+
+[colors]
+"diff removed" = { fg = "red" }
+"diff added" = { fg = "green" }
+
+[git]
+fetch = ["origin"]
+push = "origin"
+
+{{- if stat "/opt/homebrew/bin/gh" }}
+[git.credential-helper]
+"https://github.com" = ["!gh", "auth", "git-credential"]
+"https://gist.github.com" = ["!gh", "auth", "git-credential"]
+{{- else if stat "/usr/local/bin/gh" }}
+[git.credential-helper]
+"https://github.com" = ["!gh", "auth", "git-credential"]
+"https://gist.github.com" = ["!gh", "auth", "git-credential"]
+{{- end }}
+
+[aliases]
+st = ["status"]
+lg = ["log", "-r", "::@"]
+zdiff = ["diff", "--tool", "zed"]
+
+[merge-tools.zed]
+program = "zed"
+# omit diff-invocation-mode to keep the default (JJ passes two dirs)
+diff-args = [
+  # "--zed", "/Applications/Zed.app",
+  "--wait",
+  # "--new",
+  #"--add",
+  "--diff",
+  "$left",
+  "$right",
+]

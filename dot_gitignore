@@ -3,3 +3,6 @@
 .ruff_cache/
 .DS_Store
 .ai-reports/
+local_dev_rob/
+AGENTS.md
+.jj/

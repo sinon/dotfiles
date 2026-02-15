@@ -38,3 +38,4 @@ else
     abbr -a l 'ls'
     abbr -a ls 'ls -la'
 end
+abbr -a uvti 'uv tree --all-groups --invert --package'

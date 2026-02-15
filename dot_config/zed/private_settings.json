@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Macchiato",
   "colorize_brackets": true,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "show_whitespaces": "all",
@@ -34,12 +35,16 @@
         "provider": "copilot_chat",
         "model": "gpt-5.2-codex",
       },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+      },
     ],
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5.2-codex",
+      "model": "claude-sonnet-4.5",
     },
     "commit_message_model": {
       "provider": "copilot_chat",
@@ -55,7 +60,7 @@
     "enabled": true,
   },
   "project_panel": {
-    "hide_gitignore": true,
+    "hide_gitignore": false,
   },
   "base_keymap": "VSCode",
   "minimap": {
@@ -91,6 +96,9 @@
       "format_on_save": "off",
     },
     "YAML": {
+      "format_on_save": "off",
+    },
+    "Dockerfile": {
       "format_on_save": "off",
     },
     "Git Config": {
