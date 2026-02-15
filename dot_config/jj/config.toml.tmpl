@@ -5,6 +5,7 @@ name = "{{ .name }}"
 email = "{{ .email }}"
 
 {{- if and (index . "signingkey") .signingkey }}
+
 [signing]
 backend = "gpg"
 key = "{{ .signingkey }}"
