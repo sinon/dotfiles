@@ -42,6 +42,8 @@ push = "origin"
 st = ["status"]
 lg = ["log", "-r", "::@"]
 zdiff = ["diff", "--tool", "zed"]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+tug- = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 
 [merge-tools.zed]
 program = "zed"
@@ -55,3 +57,6 @@ diff-args = [
   "$left",
   "$right",
 ]
+
+[templates]
+git_push_bookmark = '"sinon/push-" ++ change_id.short()'

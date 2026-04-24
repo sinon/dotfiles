@@ -4,5 +4,5 @@
 .DS_Store
 .ai-reports/
 local_dev_rob/
-AGENTS.md
 .jj/
+LLMSESSION.md
